@@ -9,8 +9,8 @@
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.RUN"
-            android:targetPackage="com.termux"
-            android:targetClass="com.termux.app.TermuxActivity"/>
+            android:targetPackage="sh.gourav.jekyllex"
+            android:targetClass="sh.gourav.jekyllex.app.TermuxActivity"/>
     </shortcut>
 
     <shortcut
@@ -21,9 +21,9 @@
         tools:targetApi="n_mr1">
         <intent
             android:action="android.intent.action.RUN"
-            android:targetPackage="com.termux"
-            android:targetClass="com.termux.app.TermuxActivity">
-            <extra android:name="com.termux.app.failsafe_session" android:value="true" />
+            android:targetPackage="sh.gourav.jekyllex"
+            android:targetClass="sh.gourav.jekyllex.app.TermuxActivity">
+            <extra android:name="sh.gourav.jekyllex.app.failsafe_session" android:value="true" />
         </intent>
     </shortcut>
 
