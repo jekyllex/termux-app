@@ -108,7 +108,7 @@ task versionName {
 def setupBootstrap(String arch, String expectedChecksum, int version) {
     def digest = java.security.MessageDigest.getInstance("SHA-256")
 
-    def zipDownloadFile = new File(project.rootDir, "bootstraps/bootstrap-" + arch + ".zip")
+    def zipDownloadFile = new File(project.rootDir, "bootstraps/ruby-" + arch + ".zip")
 
     /* if (zipDownloadFile.exists()) {
         def buffer = new byte[8192]
@@ -126,7 +126,7 @@ def setupBootstrap(String arch, String expectedChecksum, int version) {
     }
 
     if (!zipDownloadFile.exists()) {
-        def remoteUrl = "https://bintray.com/termux/bootstrap/download_file?file_path=android10-v" + version + "-bootstrap-" + arch + ".zip"
+        def remoteUrl = "https://bintray.com/termux/bootstrap/download_file?file_path=android10-v" + version + "-ruby-" + arch + ".zip"
         logger.quiet("Downloading " + remoteUrl + " ...")
 
         zipDownloadFile.parentFile.mkdirs()
