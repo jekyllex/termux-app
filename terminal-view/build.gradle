@@ -7,7 +7,7 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayName = 'terminal-view'
-    publishedGroupId = 'sh.gourav.jekyllex'
+    publishedGroupId = 'xyz.jekyllex'
     libraryName = 'TerminalView'
     artifact = 'terminal-view'
     libraryDescription = 'The terminal view used in Termux'
@@ -41,7 +41,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'sh.gourav.jekyllex.view'
+    namespace 'xyz.jekyllex.view'
 }
 
 dependencies {

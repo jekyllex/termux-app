@@ -7,7 +7,7 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayName = 'terminal-emulator'
-    publishedGroupId = 'sh.gourav.jekyllex'
+    publishedGroupId = 'xyz.jekyllex'
     libraryName = 'TerminalEmulator'
     artifact = 'terminal-emulator'
     libraryDescription = 'The terminal emulator used in Termux'
@@ -52,7 +52,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'sh.gourav.jekyllex.terminal'
+    namespace 'xyz.jekyllex.terminal'
 }
 
 tasks.withType(Test) {

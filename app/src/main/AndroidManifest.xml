@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="internalOnly"
-    android:sharedUserId="sh.gourav.jekyllex"
+    android:sharedUserId="xyz.jekyllex"
     android:sharedUserLabel="@string/shared_user_label">
 
     <uses-feature
@@ -12,7 +12,7 @@
         android:required="false" />
 
     <permission
-        android:name="sh.gourav.jekyllex.permission.RUN_COMMAND"
+        android:name="xyz.jekyllex.permission.RUN_COMMAND"
         android:description="@string/run_command_permission_description"
         android:icon="@drawable/ic_launcher"
         android:label="@string/run_command_permission_label"
@@ -52,7 +52,7 @@
             android:value="10.0" />
 
         <activity
-            android:name="sh.gourav.jekyllex.app.TermuxActivity"
+            android:name="xyz.jekyllex.app.TermuxActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|density|screenLayout|uiMode|keyboard|keyboardHidden|navigation"
             android:label="@string/application_name"
             android:exported="true"
@@ -74,25 +74,25 @@
         </activity>
 
         <activity
-            android:name="sh.gourav.jekyllex.app.TermuxHelpActivity"
+            android:name="xyz.jekyllex.app.TermuxHelpActivity"
             android:exported="false"
             android:label="@string/application_name"
-            android:parentActivityName="sh.gourav.jekyllex.app.TermuxActivity"
+            android:parentActivityName="xyz.jekyllex.app.TermuxActivity"
             android:resizeableActivity="true"
             android:theme="@android:style/Theme.Material.Light.DarkActionBar" />
 
         <activity
-            android:name="sh.gourav.jekyllex.app.packagemanager.GooglePlayTransparentActivity"
+            android:name="xyz.jekyllex.app.packagemanager.GooglePlayTransparentActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
         </activity>
         <activity
-            android:name="sh.gourav.jekyllex.filepicker.TermuxFileReceiverActivity"
+            android:name="xyz.jekyllex.filepicker.TermuxFileReceiverActivity"
             android:excludeFromRecents="true"
             android:label="@string/application_name"
             android:noHistory="true"
             android:exported="true"
             android:resizeableActivity="true"
-            android:taskAffinity="sh.gourav.jekyllex.filereceiver">
+            android:taskAffinity="xyz.jekyllex.filereceiver">
             <!-- Accept multiple file types when sending. -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -123,7 +123,7 @@
         <activity-alias
             android:name=".HomeActivity"
             android:exported="true"
-            android:targetActivity="sh.gourav.jekyllex.app.TermuxActivity">
+            android:targetActivity="xyz.jekyllex.app.TermuxActivity">
 
             <!-- Launch activity automatically on boot on Android Things devices -->
             <intent-filter>
@@ -135,8 +135,8 @@
         </activity-alias>
 
         <provider
-            android:name="sh.gourav.jekyllex.filepicker.TermuxDocumentsProvider"
-            android:authorities="sh.gourav.jekyllex.documents"
+            android:name="xyz.jekyllex.filepicker.TermuxDocumentsProvider"
+            android:authorities="xyz.jekyllex.documents"
             android:exported="true"
             android:grantUriPermissions="true"
             android:permission="android.permission.MANAGE_DOCUMENTS">
@@ -146,23 +146,23 @@
         </provider>
 
         <service
-            android:name="sh.gourav.jekyllex.app.TermuxService"
+            android:name="xyz.jekyllex.app.TermuxService"
             android:exported="false" />
 
         <service
-            android:name="sh.gourav.jekyllex.app.RunCommandService"
+            android:name="xyz.jekyllex.app.RunCommandService"
             android:exported="true"
-            android:permission="sh.gourav.jekyllex.permission.RUN_COMMAND">
+            android:permission="xyz.jekyllex.permission.RUN_COMMAND">
             <intent-filter>
-                <action android:name="sh.gourav.jekyllex.RUN_COMMAND" />
+                <action android:name="xyz.jekyllex.RUN_COMMAND" />
             </intent-filter>
         </service>
 
-        <receiver android:name="sh.gourav.jekyllex.app.TermuxOpenReceiver" />
+        <receiver android:name="xyz.jekyllex.app.TermuxOpenReceiver" />
 
         <provider
-            android:name="sh.gourav.jekyllex.app.TermuxOpenReceiver$ContentProvider"
-            android:authorities="sh.gourav.jekyllex.files"
+            android:name="xyz.jekyllex.app.TermuxOpenReceiver$ContentProvider"
+            android:authorities="xyz.jekyllex.files"
             android:exported="true"
             android:grantUriPermissions="true"
             android:readPermission="android.permission.permRead" />

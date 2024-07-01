@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="application_name">Termux</string>
-    <string name="shared_user_label">Termux user</string>
+    <string name="application_name">JekyllEx</string>
+    <string name="shared_user_label">JekyllEx user</string>
     <string name="run_command_permission_label">Run commands in Termux environment</string>
     <string name="run_command_permission_description">execute arbitrary commands within Termux environment</string>
     <string name="new_session">New session</string>
